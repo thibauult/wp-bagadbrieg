@@ -1,0 +1,31 @@
+<div class="agenda">
+    <h2>agenda</h2>
+    <ul>
+        <?php
+        query_posts('category_name=agenda&order=desc&orderby=ID&posts_per_page=5');
+        while (have_posts()) {
+            the_post();
+            $metas = get_post_meta(get_the_ID());
+            $post_date = "-";
+            $post_lieu = "-";
+            if (isset($metas['Date'])) {
+                $post_date = $metas['Date'][0];
+            }
+            if (isset($metas['Lieu'])) {
+                $post_lieu = $metas['Lieu'][0];
+            }
+            ?>
+            <li>
+                <a href="<?php the_permalink(); ?>">
+                    <h5><?php echo $post_date; ?></h5>
+                    <h4><?php the_title(); ?></h4>
+                    <h6><?php echo $post_lieu; ?></h6>
+                </a>
+            </li>
+            <?php
+        }
+        wp_reset_query();
+        ?>
+    </ul>
+</div>
+<?php wp_nav_menu( array('theme_location' => 'footer', 'menu_class' => 'other-menu' )); ?>
