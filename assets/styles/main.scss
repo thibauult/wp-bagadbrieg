@@ -222,9 +222,9 @@ form.logout h3 {
   right: auto;
   text-shadow: none;
   text-align: left;
-  padding: 0 20px;
-  margin-top: 40px;
+  padding: 20px;
   min-height: 200px;
+  background-color: white;
 }
 
 .carousel-caption h3 {
@@ -253,12 +253,9 @@ form.logout h3 {
   padding: 30% 0;
 }
 
-.carousel-indicators li {
-  border: 1px solid black;
-}
-
-.carousel-indicators li.active {
-  background-color: black;
+.carousel-indicators {
+  position: relative;
+  bottom: 0;
 }
 
 /*
@@ -317,7 +314,7 @@ main article.home {
 }
 
 main article.home .carousel {
-  background-color: white;
+/*  background-color: white;*/
 }
 
 main article.home a.large-btn {
