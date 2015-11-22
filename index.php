@@ -4,7 +4,6 @@ if(is_front_page()) {
     $postList = get_posts(array('category_name' => 'actualites'));
 
     global $fb_tags;
-
     $fb_tags = "<meta property=\"og:title\" content=\"".get_bloginfo('name')." - ".get_the_title()."\" />
                 <meta property=\"og:description\" content=\"".get_the_excerpt()."\" />
                 <meta property=\"og:url\" content=\"".get_home_url()."\" />
