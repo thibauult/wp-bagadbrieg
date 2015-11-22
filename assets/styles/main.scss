@@ -32,6 +32,21 @@ a:hover, a:visited { text-decoration: none; }
 dl, dd, dt { border: 0; }
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
+a.large-btn {
+  width: 100%;
+  border: 1px solid white;
+  background-color: transparent;
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+  color: white;
+}
+
+a.large-btn:hover {
+  background-color: white;
+  color: black;
+}
+
 /*
   HEADER
 */
@@ -234,7 +249,16 @@ form.logout h3 {
 }
 
 .carousel-control {
-  background: none no-repeat;
+  background-image: none;
+  padding: 30% 0;
+}
+
+.carousel-indicators li {
+  border: 1px solid black;
+}
+
+.carousel-indicators li.active {
+  background-color: black;
 }
 
 /*
@@ -252,12 +276,13 @@ form.logout h3 {
 }
 
 main {
-  display: block;
-  background-color: white;
+  display: block;/*
+  background-color: white;*/
 }
 
 main header, main article, main footer {
   padding: 0 20px 20px 20px;
+  background-color: white;
 }
 
 main img, main dl {
@@ -281,6 +306,22 @@ main article h2 {
   font-size: 14px;
   font-weight: bold;
   margin: 0;
+}
+
+/*
+  HOME
+*/
+main article.home {
+  padding: 0;
+  background-color: transparent;
+}
+
+main article.home .carousel {
+  background-color: white;
+}
+
+main article.home a.large-btn {
+  margin-top: 20px;
 }
 
 /*
