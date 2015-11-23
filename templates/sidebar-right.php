@@ -1,5 +1,5 @@
 <div class="agenda">
-    <h2>agenda</h2>
+    <h2><a href="<?php echo get_category_link(get_cat_ID('agenda')); ?>">agenda</a></h2>
     <ul>
         <?php
         query_posts('category_name=agenda&order=desc&orderby=ID&posts_per_page=5');

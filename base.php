@@ -23,19 +23,13 @@ use Roots\Sage\Wrapper;
       <div class="row">
 
         <div class="col-md-3">
-          <aside>
-            <?php include Wrapper\sidebar_left_path(); ?>
-          </aside>
+          <aside><?php include Wrapper\sidebar_left_path(); ?></aside>
         </div>
         <div class="col-md-6">
-          <main>
-            <?php include Wrapper\template_path(); ?>
-          </main>
+          <main><?php include Wrapper\template_path(); ?></main>
         </div>
         <div class="col-md-3">
-          <aside>
-            <?php include Wrapper\sidebar_right_path(); ?>
-          </aside>
+          <aside><?php include Wrapper\sidebar_right_path(); ?></aside>
         </div>
 
       </div>

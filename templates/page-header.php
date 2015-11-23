@@ -10,6 +10,13 @@
         }
         ?>
     </div>
-    <h1><?= Titles\title(); ?></h1>
+    <?php
+    if(!is_category()) {
+        echo '<h1>'.Titles\title().'</h1>';
+    }
+    else {
+        echo '<h1>'.get_cat_name(the_category_ID(false)).'</h1>';
+    }
+    ?>
 </header>
 <?php endif; ?>

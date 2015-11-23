@@ -1,7 +1,7 @@
 <?php
-while (have_posts()) {
-    the_post();
+while (have_posts()) : the_post();
     get_template_part('templates/page', 'header');
     get_template_part('templates/content', 'page');
     get_template_part('templates/page', 'footer');
-}
+    comments_template('/templates/comments.php');
+endwhile;
