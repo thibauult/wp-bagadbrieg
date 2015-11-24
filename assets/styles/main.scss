@@ -1,22 +1,12 @@
-@import "common/_variables";
+@import "variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import "common/global";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/grid";
-@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/tinymce";
+@import "variables";
+@import "comments";
 
 /*
   COMMON
@@ -45,6 +35,16 @@ a.large-btn {
 a.large-btn:hover {
   background-color: white;
   color: black;
+}
+
+/*
+  BASE
+*/
+
+
+@media screen and (min-width: $screen-md-min) {
+  .col-md-3.w-20 { width: 20%; }
+  .col-md-6.w-60 { width: 60%; }
 }
 
 /*
@@ -273,13 +273,13 @@ form.logout h3 {
 }
 
 main {
-  display: block;/*
-  background-color: white;*/
+  display: block;
+  background-color: white;
 }
 
 main header, main article, main footer, main section {
-  padding: 0 20px 20px 20px;
-  background-color: white;
+  padding: 0 20px 20px 20px;/*
+  background-color: white;*/
 }
 
 main img, main dl {
@@ -304,22 +304,18 @@ main article h2 {
   font-weight: bold;
   margin: 0;
 }
-
 /*
   HOME
 */
 main article.home {
   padding: 0;
-  background-color: transparent;
-}
-
-main article.home .carousel {
-/*  background-color: white;*/
+  background-color: black;
 }
 
 main article.home a.large-btn {
   margin-top: 20px;
 }
+
 
 /*
   SHARE BAR
