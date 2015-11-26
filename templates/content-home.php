@@ -19,13 +19,12 @@
 
                 <?php $i = 0; foreach ( $postList as $post ) : setup_postdata( $post ); ?>
                     <div class="item <?php echo $i++ == 0 ? 'active' : '' ?>">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('full'); ?>
                         <div class="carousel-caption">
                             <h3><?php the_title(); ?></h3>
-                            <p>
-                                <?php the_excerpt(); ?>
-                                <a href="<?php the_permalink(); ?>" class="more">lire la suite...</a>
-                            </p>
+                            <p class="excerpt"><?php the_excerpt(); ?></p>
+                            <p class="more"><a href="<?php the_permalink(); ?>">lire la suite ></a></p>
+                            <?php get_template_part('templates/page', 'footer'); ?>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -46,6 +45,7 @@
                 <?php $i = 0; foreach ( $postList as $post ) : setup_postdata( $post ); ?>
                     <li data-target="#carousel-news" data-slide-to="<?php echo $i; ?>" class="<?php echo $i++ == 0 ? 'active' : '' ?>"></li>
                 <?php endforeach; ?>
+            </ol>
 
         </div>
 
