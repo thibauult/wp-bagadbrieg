@@ -20,3 +20,9 @@
     ?>
 </header>
 <?php endif; ?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        console.log(jQuery(".breadcrumb>.itemListElement>a>span[property='name']").length);
+    });
+</script>

@@ -23,10 +23,7 @@ get_template_part('templates/header');
 <div class="container" role="document">
     <div class="row">
 
-        <div class="col-md-3 w-20 visible-xs hidden-md collapse" id="collapseMenu">
-            <aside><?php include Wrapper\sidebar_left_path(); ?></aside>
-        </div>
-        <div class="col-md-3 w-20 hidden-xs visible-sm">
+        <div class="col-md-3 w-20">
             <aside><?php include Wrapper\sidebar_left_path(); ?></aside>
         </div>
         <div class="col-md-6 w-60">

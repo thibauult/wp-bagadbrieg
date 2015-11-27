@@ -335,6 +335,10 @@ form.logout h3 {
   font-weight: bold;
 }
 
+.breadcrumb>.itemListElement>a>span[property='name'] {
+  color: red;
+}
+
 main {
   display: block;
   background-color: white;
