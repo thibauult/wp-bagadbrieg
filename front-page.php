@@ -50,5 +50,5 @@ $fb_tags = "<meta property=\"og:title\" content=\"".get_bloginfo('name')." - ".g
     </div>
 
     <a class="large-btn" title="Voir tous les articles" href="<?php echo esc_url(get_category_link(get_cat_ID('actualites'))); ?>">voir tous les articles</a>
-
+    <br class="visible-xs hidden-md"/>
 </article>

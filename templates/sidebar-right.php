@@ -36,3 +36,4 @@
     </ul>
 </div>
 <?php wp_nav_menu( array('theme_location' => 'footer', 'menu_class' => 'other-menu' )); ?>
+<br class="visible-xs hidden-md"/>

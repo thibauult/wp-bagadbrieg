@@ -24,13 +24,24 @@ get_template_part('templates/header');
     <div class="row">
 
         <div class="col-md-3 w-20">
-            <aside><?php include Wrapper\sidebar_left_path(); ?></aside>
+            <aside class="visible-xs hidden-sm">
+                <div class="collapse" id="collapseMenu">
+                    <?php include Wrapper\sidebar_left_path(); ?>
+                </div>
+            </aside>
+            <aside class="hidden-xs visible-sm-*">
+                <?php include Wrapper\sidebar_left_path(); ?>
+                <?php get_template_part('templates/login', 'form'); ?>
+            </aside>
         </div>
         <div class="col-md-6 w-60">
             <main><?php include Wrapper\template_path(); ?></main>
         </div>
         <div class="col-md-3 w-20">
-            <aside><?php include Wrapper\sidebar_right_path(); ?></aside>
+            <aside>
+                <?php include Wrapper\sidebar_right_path(); ?>
+                <span class="visible-xs"><?php get_template_part('templates/login', 'form'); ?></span>
+            </aside>
         </div>
 
     </div>
