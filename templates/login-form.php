@@ -1,9 +1,16 @@
-<?php if (is_user_logged_in()) : ?>
+<?php
+
+if (is_user_logged_in()) {
+    global $current_user;
+    get_currentuserinfo();
+?>
+
     <form id="logout-form" class="logout">
         <h3 class="username">- <?php echo $current_user->display_name; ?> -</h3>
         <a href="<?php echo wp_logout_url(home_url()); ?>">se d&eacute;connecter</a>
     </form>
-<?php else : ?>
+
+<?php } else { ?>
 
     <div class="login-form">
 
@@ -32,4 +39,4 @@
 
     </div>
 
-<?php endif; ?>
+<?php } ?>
