@@ -3,11 +3,15 @@
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
 @import "variables";
-@import "comments";
-@import "tinymce";
+@import "util";
+
+@import "components/comments";
+@import "components/tinymce";
+@import "components/partitions";
 
 /*
   COMMON
@@ -408,39 +412,9 @@ main article.home a.large-btn {
 }
 
 /*
-  CONTACT FORM
+  FOOTER
 */
-
-.wpcf7 {
-  margin: auto;
+footer.footer {
   display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.wpcf7 input[type=submit] {
-  width: 105px;
-  height: 24px;
-  border: 1px solid #000;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-  font-size: 14px;
-  text-align: center;
-  display: block;
-  margin: auto;
-}
-
-.wpcf7 input[type=submit]:hover {
-  border: 1px solid #000;
-  background-color: #000;
-  color: #fff;
-}
-
-.footer {
   margin-top: 20px;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background-color: black;
 }

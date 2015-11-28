@@ -1,0 +1,29 @@
+/*
+  CONTACT FORM
+*/
+
+.wpcf7 {
+  margin: auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.wpcf7 input[type=submit] {
+  width: 105px;
+  height: 24px;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.wpcf7 input[type=submit]:hover {
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}

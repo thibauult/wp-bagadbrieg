@@ -24,12 +24,12 @@ get_template_part('templates/header');
     <div class="row">
 
         <div class="col-md-3 w-20">
-            <aside class="visible-xs hidden-sm">
+            <aside class="visible-xs visible-sm hidden-md">
                 <div class="collapse" id="collapseMenu">
                     <?php include Wrapper\sidebar_left_path(); ?>
                 </div>
             </aside>
-            <aside class="hidden-xs visible-sm-*">
+            <aside class="hidden-xs hidden-sm visible-md-*">
                 <?php include Wrapper\sidebar_left_path(); ?>
                 <?php get_template_part('templates/login', 'form'); ?>
             </aside>
@@ -39,12 +39,16 @@ get_template_part('templates/header');
         </div>
         <div class="col-md-3 w-20">
             <aside>
+                <br class="visible-xs visible-sm hidden-md">
                 <?php include Wrapper\sidebar_right_path(); ?>
-                <span class="visible-xs"><?php get_template_part('templates/login', 'form'); ?></span>
+                <span class="visible-xs visible-sm hidden-md"><?php get_template_part('templates/login', 'form'); ?></span>
             </aside>
         </div>
 
     </div>
+
+    <footer class="footer"></footer>
+
 </div>
 
 <?php

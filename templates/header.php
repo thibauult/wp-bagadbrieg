@@ -7,7 +7,7 @@ use Roots\Sage\Assets;
 <div class="container">
     <header class="header">
 
-        <a class="visible-xs hidden-md smart-menu" role="button" data-toggle="collapse" href="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
+        <a class="visible-xs visible-sm hidden-md smart-menu" role="button" data-toggle="collapse" href="#collapseMenu" aria-expanded="false" aria-controls="collapseMenu">
             <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
         </a>
 
