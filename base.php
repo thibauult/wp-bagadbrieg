@@ -47,9 +47,6 @@ get_template_part('templates/header');
         </div>
 
     </div>
-
-    <footer class="footer"></footer>
-
 </div>
 
 <?php
