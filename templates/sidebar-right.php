@@ -37,6 +37,12 @@
             </ul>
         </div>
     </div>
+    <div class="col-md-12 col-sm 6" style="margin-bottom: 20px">
+        <div class="fb-page" data-href="https://www.facebook.com/Bagad-Brieg-Pipe-Band-1673356046224938/"
+             data-width="340"
+             data-hide-cover="false"
+             data-show-facepile="true"></div>
+    </div>
     <div class="col-md-12 col-sm-6">
         <?php wp_nav_menu( array('theme_location' => 'footer', 'menu_class' => 'other-menu' )); ?>
     </div>

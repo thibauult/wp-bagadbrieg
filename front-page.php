@@ -19,7 +19,9 @@ $fb_tags = "<meta property=\"og:title\" content=\"".get_bloginfo('name')." - ".g
 
             <?php $i = 0; foreach ( $postList as $post ) : setup_postdata( $post ); ?>
                 <div class="item <?php echo $i++ == 0 ? 'active' : '' ?>">
-                    <?php the_post_thumbnail('full'); ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail('full'); ?>
+                    </a>
                     <div class="carousel-caption">
                         <h3><?php the_title(); ?></h3>
                         <p class="excerpt"><?php the_excerpt(); ?></p>
@@ -31,14 +33,14 @@ $fb_tags = "<meta property=\"og:title\" content=\"".get_bloginfo('name')." - ".g
         </div>
 
         <!-- Controls -->
-        <!--            <a class="left carousel-control" href="#carousel-news" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-news" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>-->
+        <a class="left carousel-control" href="#carousel-news" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-news" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
 
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -52,3 +54,9 @@ $fb_tags = "<meta property=\"og:title\" content=\"".get_bloginfo('name')." - ".g
     <a class="large-btn" title="Voir tous les articles" href="<?php echo esc_url(get_category_link(get_cat_ID('actualites'))); ?>">voir tous les articles</a>
     <br class="visible-xs visible-sm hidden-md"/>
 </article>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.carousel-caption > p.excerpt').next('p').children('a').hide()
+    });
+</script>

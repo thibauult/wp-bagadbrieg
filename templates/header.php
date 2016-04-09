@@ -20,7 +20,7 @@ use Roots\Sage\Assets;
 
             <div class="col-md-6 w-60 text-center">
                 <div class="brand-wrapper">
-                    <h1>Bagad <strong>Brieg</strong> Pipe Band</h1>
+                    <h1>Bagad <span class="strong">Brieg</span> Pipe Band</h1>
                 </div>
             </div>
         </div>

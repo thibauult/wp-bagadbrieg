@@ -15,14 +15,8 @@
         echo '<h1>'.Titles\title().'</h1>';
     }
     else {
-        echo '<h1>'.get_cat_name(the_category_ID(false)).'</h1>';
+        echo '<h1>'.single_cat_title('', false).'</h1>';
     }
     ?>
 </header>
 <?php endif; ?>
-
-<script type="text/javascript">
-    jQuery(document).ready(function(){
-        console.log(jQuery(".breadcrumb>.itemListElement>a>span[property='name']").length);
-    });
-</script>
