@@ -8,6 +8,8 @@ section.comments {
 
     .comment-meta {
       display: inline-block;
+      width: 100%;
+
     }
 
     .comment-author {
@@ -15,7 +17,9 @@ section.comments {
     }
 
     .comment-metadata {
+      line-height: 32px;
       float: right;
+      font-style: italic;
     }
 
     .comment-edit-link {

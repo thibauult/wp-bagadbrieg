@@ -15,7 +15,7 @@
         echo '<h1>'.Titles\title().'</h1>';
     }
     else {
-        echo '<h1>'.single_cat_title('', false).'</h1>';
+        echo '<h1>'.strtolower(single_cat_title('', false)).'</h1>';
     }
     ?>
 </header>

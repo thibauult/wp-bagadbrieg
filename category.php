@@ -1,31 +1,51 @@
 <?php get_template_part('templates/page', 'header'); ?>
-<article>
+<article class="category">
 
-    <table class="table table-hover">
-        <tbody>
+    <ul>
+
+    <?php
+
+    $postList = get_posts(array(
+        'posts_per_page' => -1,
+        'category'       => get_category(get_query_var( 'cat' ))->cat_ID
+    ));
+
+    $is_first = true;
+
+    foreach ( $postList as $post ) : setup_postdata( $post );
+        $meta = get_post_meta(get_the_ID());
+        if(!$is_first) {
+            echo '<hr>';
+        }
+    ?>
+
+        <li class="row">
+            <div class="col-md-5">
+                <a href="<?php echo the_permalink(); ?>">
+                    <?php the_post_thumbnail(); ?>
+                </a>
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <span>le&nbsp;<?php echo the_time( get_option( 'date_format' ) ); ?></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><?php the_excerpt(); ?></p>
+                    </div>
+                </div>
+            </div>
+        </li>
 
         <?php
-        $postList = get_posts(array( 'category' => get_category( get_query_var( 'cat' ) )->cat_ID ));
 
-        if(!empty($postList)) :
-            foreach ( $postList as $post ) : setup_postdata( $post );
-            $meta = get_post_meta(get_the_ID());
-        ?>
-                <tr>
-                    <td><?php echo $meta['Date'][0]; ?></td>
-                    <td><h4><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h4></td>
-                </tr>
+        $is_first = false;
 
-        <?php
-            endforeach;
-        else :
-        ?>
-            <div class="alert alert-warning">Cette catégorie ne contient pas encore d'articles !</div>
-        <?php
-        endif;
-        ?>
-        </tbody>
-    </table>
+    endforeach;
+    ?>
 
-
+    </ul>
 </article>

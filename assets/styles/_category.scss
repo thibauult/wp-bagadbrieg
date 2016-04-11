@@ -1,0 +1,34 @@
+article.category {
+
+  hr {
+    color: black;
+    background-color: #292929;
+    border: none;
+    height: 1px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  li.row {
+    //margin-bottom: 20px;
+  }
+
+  a > img {
+    opacity: 1;
+
+    -ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=25)"; /* Hack IE8 */
+    filter: alpha(opacity=25); /* Hack IE 5-7 */
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  a > img:hover {
+    opacity: 0.3;
+    -ms-filter:"prodig:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /* Hack IE 8 */
+    filter: alpha(opacity = 30); /* Hack IE 5-7 */
+  }
+}
