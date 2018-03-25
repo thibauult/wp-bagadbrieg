@@ -7,6 +7,9 @@
         <?php
         $postList = get_posts(array(
             'posts_per_page' => -1,
+            'order'     => 'ASC',
+            'meta_key' => 'EventDate',
+            'orderby'   => 'meta_value',
             'category'       => get_category( get_query_var( 'cat' ) )->cat_ID
         ));
 

@@ -2,7 +2,7 @@
 
 if (is_user_logged_in()) {
     global $current_user;
-    get_currentuserinfo();
+	wp_get_current_user();
 ?>
 
     <form id="logout-form" class="logout">

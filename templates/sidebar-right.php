@@ -7,7 +7,24 @@
             <h2><a href="<?php echo $agendaUrl ?>">agenda</a></h2>
             <ul>
                 <?php
-                query_posts('category_name=agenda&order=desc&orderby=ID&posts_per_page=5');
+
+                //query_posts('category_name=agenda&order=desc&orderby=ID&posts_per_page=5');
+                query_posts(
+                    array(
+                        'category_name' => 'agenda',
+                        'posts_per_page' => 5,
+                        'order'     => 'ASC',
+                        'meta_key' => 'EventDate',
+                        'orderby'   => 'meta_value' //or 'meta_value_num'
+                        /*'meta_query' => array(
+                            array(
+                                'key' => 'order_in_archive',
+                                'value' => 'some_value'
+                            )
+                        )*/
+                    )
+                );
+
                 while (have_posts()) {
                     the_post();
                     $metas = get_post_meta(get_the_ID());

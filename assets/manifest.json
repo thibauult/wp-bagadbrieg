@@ -16,6 +16,6 @@
         }
     },
     "config": {
-        "devUrl": "http://www.bagadbrieg.bzh"
+        "devUrl": "http://localhost:8888/bagadbrieg"
     }
 }
